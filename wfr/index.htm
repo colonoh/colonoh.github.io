@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WFR review</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="icon" href="./favicon.ico" type="image/x-icon"> -->
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="column left">
+          <h1>WFR Review</h1>
+        </div>
+        <div class="column right, buttons_box">
+          <button type="button" id="reveal_button" onClick="this.innerText='New patient'">Reveal condition</button>
+        </div>
+      </div>
+      
+      <span>Your patient is <span id="name"></span>, a <span id="age"></span> year-old <span id="sex"></span>.</span>
+
+      <div class="container">
+        <div class="column left">
+          <h2>Signs & Symptoms</h2>
+          <ul id="selectedSymptoms">
+          </ul>
+          <ul id="hiddenSymptoms">
+            <template id="hiddenSymptomTemplate">
+              <li><span class="hidden_symptom" title="Symptoms which modify a vital sign (e.g. rapid heart rate) are not written out but their effect can be seen in the patient's vitals"></span></li>
+            </template>
+          </ul>
+          <ul id="omittedSymptoms">
+            <template id="omittedSymptomTemplate">
+              <li><span class="omitted_symptom" title="This symptom was not present in this patient"></span></li>
+            </template>
+          </ul>
+
+        </div>
+        <div class="column right">
+          <h2>Vitals</h2>
+          <ul>
+            <li>Time: <span id="time"></span></li>
+            <li>LOR: <span id="levelOfResponsiveness"></span></li>
+            <li>HR: <span id="heartRate"></span> / <span id="heartStrength"></span> / <span id="heartRhythm"></span></li>
+            <li>RR: <span id="respiratoryRate"></span> / <span id="respiratoryRhythm"></span> / <span id="respiratoryEffort"></span></li>
+            <li>Skin: <span id="skinColor"></span>, <span id="skinTemperature"></span>, <span id="skinMoisture"></span></li>
+            <li>Pupils: <span id="pupils"></span></li>
+            <li>BP: <span id="bloodPressure"></span></li>
+            <li>Temp: <span id="bodyTemperature"></span>&#176;F</li>
+          </ul>
+        </div>
+      </div>
+
+      <hr />
+        
+      <h2 id="condition_name"></h2>
+      <span id="condition_description"></span>
+
+      <div class="container">
+        <div class="column left">
+          <h3 id="treatmentsHeader"></h3>
+          <ul id="treatments">
+          </ul>
+        </div>
+        <div class="column right">
+          <h3 id="evacuationGuidelinesHeader"></h3>
+          <ul id="evacuationGuidelines">
+          </ul>
+        </div>
+      </div>
+    </main>
+    <script src="conditions.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
