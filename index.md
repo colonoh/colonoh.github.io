@@ -1,3 +1,1 @@
-# Steve Warner
-
-Hello world!
+Hello there!
